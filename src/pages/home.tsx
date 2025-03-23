@@ -11,8 +11,8 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="home-container">
-        <h2 className="home-title">Welcome</h2>
-        <p className="home-text">Connect with friends and explore the world.</p>
+        <h2 className="home-title">Welcome to My Ionic App</h2>
+        <p className="home-text">Assignment Day 2b</p>
       </IonContent>
     </IonPage>
   );
