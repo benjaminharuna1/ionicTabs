@@ -1,20 +1,75 @@
-body {
-    --ion-background-color: #f4f4f4;
-    --ion-text-color: #333;
+/* Color Scheme */
+:root {
+    --primary-blue: #1877f2;
+    --dark-text: #1c1e21;
+    --light-text: #050505;
+    --light-gray: #e4e6eb;
+    --background-gray: #f0f2f5;
   }
   
-  h2 {
-    color: #007bff;
-    text-align: center;
+  /* Global Styles */
+  body {
+    background-color: var(--background-gray);
+    color: var(--light-text);
+    font-family: Arial, sans-serif;
   }
   
-  p {
-    text-align: center;
-  }
-  
-  .custom-button {
-    margin-top: 20px;
-    background-color: #007bff;
+  /* Header */
+  .ion-header {
+    background-color: var(--primary-blue);
     color: white;
   }
   
+  /* Home Page */
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .home-title {
+    color: var(--primary-blue);
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .home-text {
+    color: var(--dark-text);
+    font-size: 16px;
+  }
+  
+  /* Form Page */
+  .form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Input Fields */
+  .input-box ion-item {
+    --background: white;
+    --color: var(--light-text);
+    border-radius: 5px;
+    margin-bottom: 12px;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+
+ 

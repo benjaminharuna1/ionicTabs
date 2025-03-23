@@ -1,17 +1,6 @@
 import React, { useState } from "react";
-import {
-  IonButton,
-  IonContent,
-  IonHeader,
-  IonInput,
-  IonItem,
-  IonLabel,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonToast,
-} from "@ionic/react";
-import "../theme/style.css"; // External CSS
+import {IonButton,IonContent,IonHeader,IonInput,IonItem,IonLabel,IonPage,IonTitle,IonToolbar,IonToast,} from "@ionic/react";
+import "../theme/style.css";
 
 const Form: React.FC = () => {
   const [fullName, setFullName] = useState("");
@@ -31,27 +20,31 @@ const Form: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader className="ion-header">
         <IonToolbar>
           <IonTitle>Form</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonItem>
-          <IonLabel position="floating">Full Name</IonLabel>
-          <IonInput value={fullName} onIonChange={(e) => setFullName(e.detail.value!)} />
-        </IonItem>
+        <div className="form-container">
+          <h2>Create an Account</h2>
 
-        <IonItem>
-          <IonLabel position="floating">Email Address</IonLabel>
-          <IonInput type="email" value={email} onIonChange={(e) => setEmail(e.detail.value!)} />
-        </IonItem>
+          <IonItem className="input-box">
+            <IonLabel position="floating">Full Name</IonLabel>
+            <IonInput value={fullName} onIonChange={(e) => setFullName(e.detail.value!)} />
+          </IonItem>
 
-        <IonButton expand="full" onClick={handleSubmit} className="custom-button">
-          Submit
-        </IonButton>
+          <IonItem className="input-box">
+            <IonLabel position="floating">Email Address</IonLabel>
+            <IonInput type="email" value={email} onIonChange={(e) => setEmail(e.detail.value!)} />
+          </IonItem>
 
-        <IonToast isOpen={showToast} message={error} duration={2000} onDidDismiss={() => setShowToast(false)} />
+          <IonButton expand="full" onClick={handleSubmit} className="submit-button">
+            Submit
+          </IonButton>
+
+          <IonToast isOpen={showToast} message={error} duration={2000} onDidDismiss={() => setShowToast(false)} />
+        </div>
       </IonContent>
     </IonPage>
   );
